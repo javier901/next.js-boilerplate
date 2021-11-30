@@ -1,5 +1,5 @@
 {
-  "name": "aaa",
+  "name": "nextjs-boilerplate",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,8 +8,12 @@
     "lint": "next lint",
     "type-check": "tsc"
   },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "dependencies": {
     "@apollo/client": "^3.4.16",
+    "@prisma/client": "^3.5.0",
     "apollo-server-express": "^3.5.0",
     "express": "^4.17.1",
     "graphql": "^15.7.2",
@@ -18,7 +22,7 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/node": "16.11.6",
+    "@types/node": "^16.11.6",
     "@types/react": "17.0.34",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "autoprefixer": "^10.4.0",
@@ -27,7 +31,9 @@
     "eslint-config-prettier": "^8.3.0",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
+    "prisma": "^3.5.0",
     "tailwindcss": "^2.2.19",
-    "typescript": "^4.4.4"
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
   }
 }

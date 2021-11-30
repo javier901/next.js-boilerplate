@@ -3,13 +3,9 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { ApolloServer } from 'apollo-server-express'
 import { typeDefs } from '../../graphql/schema'
 import { resolvers } from '../../graphql/resolvers'
+import { createContext } from '../../graphql/context'
 
-function runMiddleware(
-  req: NextApiRequest,
-  res: NextApiResponse,
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  fn: Function
-) {
+function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn) {
   return new Promise((resolve, reject) => {
     fn(req, res, (result: unknown) => {
       if (result instanceof Error) {
@@ -20,7 +16,12 @@ function runMiddleware(
   })
 }
 
-const apolloServer = new ApolloServer({ typeDefs, resolvers })
+const apolloServer = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context: createContext,
+})
+
 await apolloServer.start()
 const apolloMiddleware = apolloServer.getMiddleware({
   path: '/api/graphql',
