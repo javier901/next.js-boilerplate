@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
 import { ApolloServer } from 'apollo-server-express'
-import { typeDefs } from '../../graphql/schema'
+import { schema } from '../../graphql/schema'
 import { resolvers } from '../../graphql/resolvers'
 import { createContext } from '../../graphql/context'
 
@@ -17,7 +17,7 @@ function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn) {
 }
 
 const apolloServer = new ApolloServer({
-  typeDefs,
+  schema,
   resolvers,
   context: createContext,
 })

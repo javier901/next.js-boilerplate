@@ -1,12 +1,12 @@
 import { GetServerSideProps } from 'next'
 import { gql } from '@apollo/client'
-import { Country } from '../interfaces'
+import { User } from '../interfaces'
 import client from '../graphql/client'
 import Layout from '../components/Layout'
 import styles from '../styles/grid.module.css'
 
 type Props = {
-  items: Country[]
+  items: User[]
 }
 
 const SSR = ({ items }: Props) => {
@@ -29,8 +29,8 @@ const SSR = ({ items }: Props) => {
 export const getServerSideProps: GetServerSideProps = async () => {
   const { data } = await client.query({
     query: gql`
-      query Countries {
-        countries {
+      query Users {
+        users {
           code
           name
           emoji
@@ -38,7 +38,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       }
     `,
   })
-  const items: Country[] = data.countries
+  const items: User[] = data.users
   return { props: { items } }
 }
 

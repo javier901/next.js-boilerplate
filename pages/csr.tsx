@@ -1,6 +1,6 @@
 import CSRProvider from '../components/CSRProvider'
 import { useQuery, gql } from '@apollo/client'
-import { Country } from '../interfaces'
+import { User } from '../interfaces'
 import Layout from '../components/Layout'
 import styles from '../styles/grid.module.css'
 
@@ -15,8 +15,8 @@ const CSR = () => {
 }
 
 const QUERY = gql`
-  query Countries {
-    countries {
+  query Users {
+    users {
       code
       name
       emoji
@@ -34,7 +34,7 @@ const Grid = () => {
     console.error(error)
     return null
   }
-  const items: Country[] = data.countries
+  const items: User[] = data.users
 
   return (
     <>

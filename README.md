@@ -15,7 +15,7 @@ I built this boilerplate in the following order.
 - [GraphQL (client)](https://www.apollographql.com/blog/apollo-client/next-js/next-js-getting-started/): use Apollo Client in Next.js
 - [GraphQL (server)](https://github.com/vercel/next.js/blob/canary/examples/api-routes-graphql/pages/api/graphql.js): use Apollo Server in Next.js
 - [Prisma (basic)](https://www.prisma.io/blog/fullstack-nextjs-graphql-prisma-oklidw1rhw#add-prisma-to-your-project): basic setup (e.g. schema, migrating, seeding)
-- [Prisma (GraphQL)](https://www.prisma.io/blog/fullstack-nextjs-graphql-prisma-2-fwpc6ds155#initialize-prisma-client): prisma with GraphQL integration
+- [Prisma (GraphQL)](https://www.prisma.io/blog/fullstack-nextjs-graphql-prisma-2-fwpc6ds155#initialize-prisma-client): prisma with GraphQL integration based on Nexus
 
 ## Getting started
 

@@ -26,7 +26,7 @@ const data = [
 ]
 
 async function main() {
-  await prisma.country.createMany({
+  await prisma.user.createMany({
     data: data,
   })
 }
