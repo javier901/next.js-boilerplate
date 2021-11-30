@@ -44,3 +44,13 @@ npx prisma db seed
 ```
 npm run dev
 ```
+
+## Document for further reading
+
+- [Next.js](https://nextjs.org/docs/getting-started)
+- [GraphQL](https://graphql.org/learn/)
+- [GraphQL (Nexus)](https://nexusjs.org/docs/)
+- [Prisma (concept)](https://www.prisma.io/docs/concepts/components)
+- [Prisma (guide)](https://www.prisma.io/docs/guides)
+- [TypeScript](https://willh.gitbook.io/typescript-tutorial/basics)
+- [Tailwind CSS](https://tailwindcss.com/docs)
