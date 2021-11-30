@@ -19,7 +19,7 @@ I built this boilerplate in the following order.
 
 ## Getting started
 
-Before getting start, make sure to rename `.env.example` to `.env` and edit the environment variable.
+Before getting start, please make sure you have created an empty database (e.g. PostgreSQL). Then, rename `.env.example` to `.env` and edit the environment variable. This will enable Prisma database connection, and the GraphQL communicate between client and server.
 
 1. Install npm dependencies
 
@@ -42,5 +42,5 @@ npx prisma db seed
 4. Start the app
 
 ```
-npm run start
+npm run dev
 ```
