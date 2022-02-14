@@ -54,3 +54,8 @@ npm run dev
 - [Prisma (guide)](https://www.prisma.io/docs/guides)
 - [TypeScript](https://willh.gitbook.io/typescript-tutorial/basics)
 - [Tailwind CSS](https://tailwindcss.com/docs)
+
+## Notes
+
+- The SSG page still fails to build ([link-1](https://github.com/TomHsiao1260/next-graphql-example), [link-2](https://github.com/vercel/next.js/pull/30082))
+- Read more about Prima. Maybe the order of the command above needs to be corrected (e.g. `npx prisma db seed` fails when using AWS RDS).
