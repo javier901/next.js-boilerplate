@@ -45,6 +45,14 @@ npx prisma db seed
 npm run dev
 ```
 
+## Reset the database
+
+You can use the following command to reset the database. It will also automatically seed the database as well.
+
+```
+npx prisma migrate reset
+```
+
 ## Document for further reading
 
 - [Next.js](https://nextjs.org/docs/getting-started)
@@ -58,4 +66,3 @@ npm run dev
 ## Notes
 
 - The SSG page still fails to build ([link-1](https://github.com/TomHsiao1260/next-graphql-example), [link-2](https://github.com/vercel/next.js/pull/30082))
-- Read more about Prima. Maybe the order of the command above needs to be corrected (e.g. `npx prisma db seed` fails when using AWS RDS).
