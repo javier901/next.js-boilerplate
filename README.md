@@ -53,6 +53,12 @@ You can use the following command to reset the database. It will also automatica
 npx prisma migrate reset
 ```
 
+Don't forget to push the database structure again.
+
+```
+npx prisma db push
+```
+
 ## Document for further reading
 
 - [Next.js](https://nextjs.org/docs/getting-started)
